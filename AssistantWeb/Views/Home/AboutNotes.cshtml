@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "AboutNotes";
+}
+
+<h2>The notes core</h2>
+
+<img src="~/Content/Images/notes_wallpaper.png" />
+
+<p class="about">
+    The notes core is all about notes taking and providing additional information to it. <br />
+    Notes core has the ability to create simple notes, numbered lists, to-do lists or a combination of them.
+    <br />
+    Moreover, combined with other cores, The notes core can be expanded beyond simple notes taking,
+    for example, Combined with the money's core, it can create a shopping list if provided
+    the quantity and the price of the items per unit, this would help the user to determine
+    the total price required for the list in a tip of a button.
+    <br />
+    The notes core can be accessed via your persoal assistant app or in your profile.
+</p>
+
+@section scripts{
+
+    <script>
+        $(function () {
+            console.log("Hello there");
+
+            $('.bg-primary').css("background-color", "#40200A");
+
+        });
+    </script>
+
+}
