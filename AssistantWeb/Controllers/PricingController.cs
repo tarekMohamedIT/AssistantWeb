@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace AssistantWeb.Controllers
 {
-    public class MoneyController : Controller
+    public class PricingController : Controller
     {
-        // GET: Money
+        // GET: Pricing
         public ActionResult Index()
         {
             return View();

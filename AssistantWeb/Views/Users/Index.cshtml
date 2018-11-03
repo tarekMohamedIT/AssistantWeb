@@ -1,0 +1,32 @@
+﻿@model AssistantWeb.Models.User
+@{
+    ViewBag.Title = "Index";
+}
+
+@Html.Partial("_loginForm", Model)
+@Html.Partial("_registerForm", Model)
+
+@section scripts{
+
+    <script>
+        $(function () {
+            $("#register-form").hide();
+
+            $("#go-to-login").click(function () {
+                
+                $("#register-form").fadeOut(250, function () {
+                    $("#login-form").fadeIn(250);
+                });
+            });
+
+            $("#go-to-register").click(function () {
+
+                $("#login-form").fadeOut(250, function () {
+                    $("#register-form").fadeIn(250);
+                });
+            });
+        });
+    </script>    
+    
+}
+

@@ -174,7 +174,8 @@
     <Compile Include="Controllers\api\money\WalletsController.cs" />
     <Compile Include="Controllers\api\notes\NotesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MoneyController.cs" />
+    <Compile Include="Controllers\PricingController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="DatabaseContext\AssistantDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -186,6 +187,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Money\Item.cs" />
     <Compile Include="Models\Money\Wallet.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -277,7 +279,10 @@
     <Content Include="Views\Shared\_navbar.cshtml" />
     <Content Include="Views\Home\AboutNotes.cshtml" />
     <Content Include="Views\Home\AboutMoney.cshtml" />
-    <Content Include="Views\Money\Index.cshtml" />
+    <Content Include="Views\Pricing\Index.cshtml" />
+    <Content Include="Views\Shared\_loginForm.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Shared\_registerForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
