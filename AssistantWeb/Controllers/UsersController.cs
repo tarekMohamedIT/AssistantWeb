@@ -1,4 +1,4 @@
-﻿using AssistantWeb.Models;
+﻿using AssistantWeb.Models.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;

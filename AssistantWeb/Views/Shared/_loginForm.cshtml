@@ -1,4 +1,4 @@
-﻿@model AssistantWeb.Models.User
+﻿@model AssistantWeb.Models.Users.User
 <div id="login-form">
 
     <h2>Login</h2>
@@ -8,11 +8,13 @@
             @Html.LabelFor(u => u.Email)
             @Html.TextBoxFor(u => u.Email, new { @class = "form-control", @type = "email", @placeholder = "example@hotmail.com" })
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            @Html.ValidationMessageFor(u => u.Email)
         </div>
 
         <div class="form-group">
             @Html.LabelFor(u => u.Password)
             @Html.TextBoxFor(u => u.Password, new { @class = "form-control", @type = "password" })
+            @Html.ValidationMessageFor(u => u.Password)
         </div>
 
         <button class="btn btn-primary" type="submit">Submit</button>
@@ -22,5 +24,5 @@
     <br />
 
     <label>Don't have an account? register here</label>
-    <button class="btn btn-primary" id="go-to-register">Register</button>
+    <button class="btn btn-link" id="go-to-register">Register</button>
 </div>

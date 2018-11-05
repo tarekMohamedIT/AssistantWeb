@@ -1,4 +1,4 @@
-﻿@model AssistantWeb.Models.User
+﻿@model AssistantWeb.Models.Users.User
 @{
     ViewBag.Title = "Index";
 }
@@ -26,7 +26,9 @@
                 });
             });
         });
-    </script>    
+    </script>
+
+    @Scripts.Render("~/bundles/jqueryval")
     
 }
 
