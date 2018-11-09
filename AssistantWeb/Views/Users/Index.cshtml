@@ -8,12 +8,24 @@
 
 @section scripts{
 
-    <script>
-        $(function () {
+    @if (Url.RequestContext.RouteData.Values["Id"].ToString() == "2") {
+        <script>
+            $("#login-form").hide();
+        </script>
+    }
+
+    else
+    {
+        <script>
             $("#register-form").hide();
+        </script>
+    }
+
+    <script>
+        $(function (){
 
             $("#go-to-login").click(function () {
-                
+
                 $("#register-form").fadeOut(250, function () {
                     $("#login-form").fadeIn(250);
                 });

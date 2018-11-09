@@ -188,6 +188,8 @@
     <Compile Include="Models\Money\Item.cs" />
     <Compile Include="Models\Money\Wallet.cs" />
     <Compile Include="Models\Users\User.cs" />
+    <Compile Include="Models\Users\UserLogin.cs" />
+    <Compile Include="Models\Users\UserStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -199,6 +201,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min-lux.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\main-wallpaper.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -286,7 +289,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

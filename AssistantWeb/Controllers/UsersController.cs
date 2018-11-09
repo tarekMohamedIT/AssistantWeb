@@ -1,6 +1,7 @@
 ﻿using AssistantWeb.Models.Users;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -9,26 +10,51 @@ namespace AssistantWeb.Controllers
 {
     public class UsersController : Controller
     {
-        // GET: Users
+
+        [HttpPost]
+        [Route("users/login")]
         public ActionResult Login(User user)
         {
-            return Content(string.Format(
-                "<type>{0}</type><email>{1}</email><message>{2}</message>",
-                "success",
-                user.Email,
-                "User logged in successfully!"));
+            if (user.Id == -1)
+                user.Id = 2;
+
+
+            UserStatus status = new UserStatus()
+            {
+                UserId = user.Id,
+
+                Message = "Logged in successfully"
+            };
+
+            Session.Add("_loginId", status);
+
+            return Redirect("/Home");
         }
 
+        [Route("users/register")]
+        [HttpPost]
         public ActionResult Register(User user)
         {
-            return Content(string.Format(
-               "<type>{0}</type><email>{1}</email><message>{2}</message>",
-               "success",
-               user.Email,
-               "User logged in successfully!"));
+            if (user.Id == -1)
+                user.Id = 2;
+
+            UserStatus status = new UserStatus()
+            {
+                UserId = user.Id,
+
+                Message = "Registered new user successfully"
+            };
+
+            return Redirect("/Home");
         }
 
         public ActionResult Index()
+        {
+            return View(new User());
+        }
+
+        [Route("users/{Id}")]
+        public ActionResult Index(int Id = 1)
         {
             return View(new User());
         }

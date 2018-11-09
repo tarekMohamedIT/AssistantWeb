@@ -3,7 +3,8 @@
 
     <h2>Login</h2>
 
-    <form method="post" action="login">
+    @using (Html.BeginForm("login", "users"))
+    {
         <div class="form-group">
             @Html.LabelFor(u => u.Email)
             @Html.TextBoxFor(u => u.Email, new { @class = "form-control", @type = "email", @placeholder = "example@hotmail.com" })
@@ -17,8 +18,8 @@
             @Html.ValidationMessageFor(u => u.Password)
         </div>
 
-        <button class="btn btn-primary" type="submit">Submit</button>
-    </form>
+        <button class="btn btn-primary" type="submit">Login</button>
+    }
 
     <br />
     <br />
