@@ -180,11 +180,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810272105546_InitializeItemsTable.cs" />
-    <Compile Include="Migrations\201810272105546_InitializeItemsTable.Designer.cs">
-      <DependentUpon>201810272105546_InitializeItemsTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Money\Item.cs" />
     <Compile Include="Models\Money\Wallet.cs" />
     <Compile Include="Models\Users\User.cs" />
@@ -201,7 +196,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min-lux.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\collaboration.jpg" />
     <Content Include="Content\Images\main-wallpaper.jpg" />
+    <Content Include="Content\Images\simplicity.jpeg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -299,11 +296,6 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810272105546_InitializeItemsTable.resx">
-      <DependentUpon>201810272105546_InitializeItemsTable.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
