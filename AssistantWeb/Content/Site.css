@@ -93,3 +93,15 @@ p.nav-link {
     margin-left:auto;
     margin-right:auto;
 }
+
+.plans-table{
+    margin-top: 20px;
+}
+
+.plans-table thead th{
+    color: black;
+}
+
+.plans-table tbody th{
+    color: black;
+}

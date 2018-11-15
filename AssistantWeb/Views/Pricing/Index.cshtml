@@ -5,75 +5,48 @@
 
 <h4>Choose from our bundles and pay for what suites your needs only!</h4>
 
-<table class="table table-hover">
+<table class="table table-hover plans-table">
     <thead>
-        <tr>
+        <tr class="table-primary">
             <th scope="col">Type</th>
-            <th scope="col">Column heading</th>
-            <th scope="col">Column heading</th>
-            <th scope="col">Column heading</th>
+            <th scope="col">Free</th>
+            <th scope="col">Silver membership</th>
+            <th scope="col">Premium membership</th>
         </tr>
     </thead>
     <tbody>
-        <tr class="table-active">
-            <th scope="row">Active</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr>
-            <th scope="row">Default</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="table-primary">
-            <th scope="row">Primary</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="table-secondary">
-            <th scope="row">Secondary</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="table-success">
-            <th scope="row">Success</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="table-danger">
-            <th scope="row">Danger</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="table-warning">
-            <th scope="row">Warning</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="table-info">
-            <th scope="row">Info</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="table-light">
-            <th scope="row">Light</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="table-dark">
-            <th scope="row">Dark</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
+        <tr id="price-row"></tr>
+        <tr id="all-row"></tr>
+        <tr id="core-row"></tr>
+        <tr id="support-row"></tr>
     </tbody>
-</table> 
+</table>
+
+@section scripts{
+
+    <script>
+        $(function () {
+            $.ajax({
+                type: "GET",
+                url: "/api/plans",
+                data: "",
+                dataType: "json",
+                success: function (response) {
+
+                    $("#price-row").append("<th>Price/year</th>");
+                    $("#all-row").append("<th>Access to the 3 cores</th>");
+                    $("#core-row").append("<th>Access to the main core</th>");
+                    $("#support-row").append("<th>Robust support</th>");
+
+                    $.each(response, function (index) {
+                        $("#price-row").append("<td>" + response[index].PriceAnnual + "$</td>");
+                        $("#all-row").append("<td>" + response[index].UseAll + "</td>");
+                        $("#core-row").append("<td>" + response[index].UseCore + "</td>");
+                        $("#support-row").append("<td>" + response[index].ProvideSupport + "</td>");
+                    });
+                }
+            });
+        });
+    </script>
+    
+}

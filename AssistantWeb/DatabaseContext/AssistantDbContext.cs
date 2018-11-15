@@ -1,4 +1,5 @@
 ﻿using AssistantWeb.Models.Money;
+using AssistantWeb.Models.Pricing;
 using AssistantWeb.Models.Users;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace AssistantWeb.DatabaseContext
         public DbSet<User> Users { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<Wallet> Wallets { get; set; }
+        public DbSet<Plan> Plans { get; set; }
 
     }
 }
